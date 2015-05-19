@@ -1,0 +1,7 @@
+.DS_Store
+build
+DerivedData
+tmp
+make/custom.make
+xcuserdata
+doc
