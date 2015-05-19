@@ -17,6 +17,7 @@ static int run (const FMConfig *cfg);
 
 const FMAction *const fm_register = &(const FMAction) {
 	"register",
+	"[-s SCOPE] FILE ...",
 	"add fonts to the font manager",
 	usage, config, run
 };

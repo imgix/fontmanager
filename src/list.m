@@ -21,6 +21,7 @@ static int run (const FMConfig *cfg);
 
 const FMAction *const fm_list = &(const FMAction) {
 	"list",
+	"[-n] [-p] [-f]",
 	"list the font names in the manager",
 	usage, config, run
 };
@@ -30,9 +31,13 @@ usage (void)
 {
 	fprintf (stderr,
 		"%s options:\n"
-		"    -n  list PostScript names (default)\n"
+		"    -p  list font paths (default)\n"
+		"    -n  list PostScript names\n"
 		"    -f  list font familty names\n"
-		"    -p  list font paths\n",
+		"\n"
+		"    The -p and -n options may be combined to print out the\n"
+		"    PostScript name and the font path. The -f option can only\n"
+		"    be used by itself however.\n",
 		fm_list->name
 	);
 }

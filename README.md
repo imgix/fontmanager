@@ -18,8 +18,8 @@ Running ```fontmanager -h``` will show this help:
 
     usage: fontmanager [-v] register [-s SCOPE] FILE ...
            fontmanager [-v] unregister [-s SCOPE] FILE ...
-           fontmanager [-v] verify FILE ...
-           fontmanager list
+           fontmanager [-v] list [-n] [-p] [-f]
+           fontmanager [-v] verify [-s SCOPE] FILE ...
     
     global options:
         -v  enable verbose mode
@@ -27,18 +27,21 @@ Running ```fontmanager -h``` will show this help:
     
     subcommands:
         register: add fonts to the font manager
-        unregister: remove fonts from the font manager
-        verify: determine whether a font is supported on the current platform
+        unregister: remove fonts to the font manager
         list: list the font names in the manager
+        verify: determine whether a font is supported on the current platform
     
     register options:
         -s  scope for the operation, user (default) or session
     
-    unregister options:
+    register options:
         -s  scope for the operation, user (default) or session
     
     list options:
-        -n  list PostScript names (default)
+        -p  list font paths (default)
+        -n  list PostScript names
         -f  list font familty names
-        -p  list font paths
-
+    
+        The -p and -n options may be combined to print out the
+        PostScript name and the font path. The -f option can only
+        be used by itself however.

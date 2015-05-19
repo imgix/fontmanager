@@ -17,6 +17,7 @@ static int run (const FMConfig *cfg);
 
 const FMAction *const fm_unregister = &(const FMAction) {
 	"unregister",
+	"[-s SCOPE] FILE ...",
 	"remove fonts to the font manager",
 	usage, config, run
 };

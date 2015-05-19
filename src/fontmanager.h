@@ -16,7 +16,7 @@ typedef struct FMConfig FMConfig;
 typedef struct FMAction FMAction;
 
 struct FMAction {
-	const char *name, *about;
+	const char *name, *args, *about;
 	void (*usage)(void);
 	void (*config)(FMConfig *cfg, int argc, char **argv);
 	int (*run)(const FMConfig *cfg);

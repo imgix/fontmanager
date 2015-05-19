@@ -15,11 +15,14 @@ static const FMAction *const *actions;
 void
 fm_usage (int rc)
 {
+	fprintf (stderr, "usage: ");
+	for (int i = 0; actions[i] != NULL; i++) {
+		if (i > 0) {
+			fprintf (stderr, "       ");
+		}
+		fprintf (stderr, "fontmanager [-v] %s %s\n", actions[i]->name, actions[i]->args);
+	}
 	fprintf (stderr,
-		"usage: fontmanager [-v] register [-s SCOPE] FILE ...\n"
-		"       fontmanager [-v] unregister [-s SCOPE] FILE ...\n"
-		"       fontmanager [-v] verify FILE ...\n"
-		"       fontmanager list\n"
 		"\n"
 		"global options:\n"
 		"    -v  enable verbose mode\n"

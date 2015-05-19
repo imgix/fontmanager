@@ -16,7 +16,8 @@ static void config (FMConfig *cfg, int argc, char **argv);
 static int run (const FMConfig *cfg);
 
 const FMAction *const fm_verify = &(const FMAction) {
-	"verifyt",
+	"verify",
+	"[-s SCOPE] FILE ...",
 	"determine whether a font is supported on the current platform",
 	usage, config, run
 };
