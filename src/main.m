@@ -232,7 +232,8 @@ proc_fonts (Config *cfg, bool (^proc)(CFArrayRef, CFArrayRef *))
 	
 	for (NSError *err in (NSArray *)errors) {
 		NSArray *files = [err.userInfo valueForKey:(NSString *)kCTFontManagerErrorFontURLsKey];
-		bool warn = err.code == 105 || err.code == 201;
+		bool warn = err.code == kCTFontManagerErrorAlreadyRegistered ||
+					err.code == kCTFontManagerErrorNotRegistered;
 		if (!warn || (warn && cfg->verbose)) {
 			printf ("[%s:%s] %s (%lu)\n",
 					warn ? "WARN" : "FAIL",
