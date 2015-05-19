@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3FC837011B0BB9880004E3F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC837001B0BB9880004E3F0 /* main.m */; };
+		3FC837031B0BE05A0004E3F0 /* register.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC837021B0BE05A0004E3F0 /* register.m */; };
+		3FC837061B0BE09D0004E3F0 /* unregister.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC837051B0BE09D0004E3F0 /* unregister.m */; };
+		3FC8370A1B0BE0F80004E3F0 /* list.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC837091B0BE0F80004E3F0 /* list.m */; };
+		3FC8370D1B0BE10D0004E3F0 /* verify.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8370C1B0BE10D0004E3F0 /* verify.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,15 @@
 /* Begin PBXFileReference section */
 		3F3E837D1B0AC92600AAF6E2 /* fontmanager */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = fontmanager; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC837001B0BB9880004E3F0 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3FC837021B0BE05A0004E3F0 /* register.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = register.m; sourceTree = "<group>"; };
+		3FC837041B0BE0830004E3F0 /* register.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = register.h; sourceTree = "<group>"; };
+		3FC837051B0BE09D0004E3F0 /* unregister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = unregister.m; sourceTree = "<group>"; };
+		3FC837071B0BE0C40004E3F0 /* unregister.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = unregister.h; sourceTree = "<group>"; };
+		3FC837081B0BE0EE0004E3F0 /* list.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = list.h; sourceTree = "<group>"; };
+		3FC837091B0BE0F80004E3F0 /* list.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = list.m; sourceTree = "<group>"; };
+		3FC8370B1B0BE1020004E3F0 /* verify.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = verify.h; sourceTree = "<group>"; };
+		3FC8370C1B0BE10D0004E3F0 /* verify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = verify.m; sourceTree = "<group>"; };
+		3FC8370E1B0BE1BE0004E3F0 /* fontmanager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fontmanager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +70,16 @@
 		3FC836FF1B0BB9880004E3F0 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				3FC8370E1B0BE1BE0004E3F0 /* fontmanager.h */,
 				3FC837001B0BB9880004E3F0 /* main.m */,
+				3FC837041B0BE0830004E3F0 /* register.h */,
+				3FC837021B0BE05A0004E3F0 /* register.m */,
+				3FC837071B0BE0C40004E3F0 /* unregister.h */,
+				3FC837051B0BE09D0004E3F0 /* unregister.m */,
+				3FC837081B0BE0EE0004E3F0 /* list.h */,
+				3FC837091B0BE0F80004E3F0 /* list.m */,
+				3FC8370B1B0BE1020004E3F0 /* verify.h */,
+				3FC8370C1B0BE10D0004E3F0 /* verify.m */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -118,6 +140,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FC8370D1B0BE10D0004E3F0 /* verify.m in Sources */,
+				3FC837031B0BE05A0004E3F0 /* register.m in Sources */,
+				3FC8370A1B0BE0F80004E3F0 /* list.m in Sources */,
+				3FC837061B0BE09D0004E3F0 /* unregister.m in Sources */,
 				3FC837011B0BB9880004E3F0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
