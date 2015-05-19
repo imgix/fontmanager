@@ -28,16 +28,17 @@ Running ```fontmanager -h``` will show this help:
     subcommands:
         register: add fonts to the font manager
         unregister: remove fonts from the font manager
-        verify: determine whether a font is supported on the current
-        list: list the font names in the managerplatform
+        verify: determine whether a font is supported on the current platform
+        list: list the font names in the manager
     
     register options:
-        -s  scope for the operation (user or session)
+        -s  scope for the operation, user (default) or session
     
     unregister options:
-        -s  scope for the operation (user or session)
+        -s  scope for the operation, user (default) or session
     
     list options:
         -n  list PostScript names (default)
         -f  list font familty names
         -p  list font paths
+
