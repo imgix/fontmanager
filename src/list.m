@@ -93,12 +93,15 @@ run (const FMConfig *cfg)
 
 	NSString *last = nil;
 	for (NSURL *url in sorted) {
-		// this currently assumes the fragment is postscript-name=value only
 		NSString *ps = nil;
 		if ([url.fragment hasPrefix:@"postscript-name="]) {
 			ps = [url.fragment substringFromIndex:16];
 			if ([ps hasPrefix:@"."]) {
 				continue;
+			}
+			NSRange rng = [ps rangeOfString:@";"];
+			if (rng.location != NSNotFound) {
+				ps = [ps substringToIndex:rng.location];
 			}
 		}
 
