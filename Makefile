@@ -9,5 +9,4 @@ debug:
 clean:
 	xcodebuild clean
 
-.PHONY: all release debug
-
+.PHONY: all release debug clean
