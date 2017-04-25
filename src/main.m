@@ -61,7 +61,7 @@ fm_file_urls (char **urls, int n)
 	NSMutableArray *files = [NSMutableArray arrayWithCapacity:n];
 	for (int i = 0; i < n; i++) {
 		NSString *filePath = [NSString stringWithCString:urls[i] encoding:NSUTF8StringEncoding];
-		NSURL *fileURL = [NSURL URLWithString:[filePath stringByExpandingTildeInPath] relativeToURL:base];
+		NSURL *fileURL = [NSURL fileURLWithPath:[filePath stringByExpandingTildeInPath] relativeToURL:base];
 		[files addObject:fileURL];
 	}
 	return (CFArrayRef)files;
